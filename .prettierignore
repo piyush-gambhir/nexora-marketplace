@@ -1,0 +1,11 @@
+.next
+node_modules
+dist
+build
+coverage
+.prettierrc
+.prettierrc.json
+prettier.config.js
+.prettierrc.js
+pnpm-lock.yaml
+package-lock.json
