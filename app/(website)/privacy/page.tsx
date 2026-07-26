@@ -140,10 +140,10 @@ export default function PrivacyPage() {
               <p className="text-muted-foreground leading-relaxed">
                 If you have any questions about this Privacy Policy, please contact us at{' '}
                 <a
-                  href="mailto:privacy@nexora.com"
+                  href="mailto:privacy@example.com"
                   className="text-primary cursor-pointer hover:underline"
                 >
-                  privacy@nexora.com
+                  privacy@example.com
                 </a>
               </p>
             </div>

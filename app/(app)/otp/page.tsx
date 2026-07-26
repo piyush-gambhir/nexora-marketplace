@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { GalleryVerticalEnd } from 'lucide-react';
 
 import { OTPForm } from '@/components/otp-form';
@@ -6,7 +8,7 @@ export default function OTPPage({ searchParams }: { searchParams: { email?: stri
   return (
     <div className="bg-muted flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
       <div className="flex w-full max-w-sm flex-col gap-6">
-        <a
+        <Link
           href="/"
           className="flex cursor-pointer items-center gap-2 self-center font-medium"
         >
@@ -14,7 +16,7 @@ export default function OTPPage({ searchParams }: { searchParams: { email?: stri
             <GalleryVerticalEnd className="size-4" />
           </div>
           Nexora
-        </a>
+        </Link>
         <OTPForm email={searchParams?.email} />
       </div>
     </div>
