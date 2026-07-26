@@ -129,10 +129,10 @@ export default function TermsPage() {
               <p className="text-muted-foreground leading-relaxed">
                 If you have any questions about these Terms and Conditions, please contact us at{' '}
                 <a
-                  href="mailto:legal@nexora.com"
+                  href="mailto:legal@example.com"
                   className="text-primary cursor-pointer hover:underline"
                 >
-                  legal@nexora.com
+                  legal@example.com
                 </a>
               </p>
             </div>
