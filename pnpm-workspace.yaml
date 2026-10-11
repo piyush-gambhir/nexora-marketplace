@@ -1,8 +1,6 @@
 allowBuilds:
   sharp: true
   unrs-resolver: true
-onlyBuiltDependencies:
-  - sharp
 
 # Security floors for vulnerable transitive dependencies, each scoped to the
 # vulnerable range of one major line. Drop an entry once its parents ship a
