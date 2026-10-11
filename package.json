@@ -2,6 +2,10 @@
   "name": "nexora-marketplace",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@12.11.2",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -66,7 +70,7 @@
     "geist": "1.5.1",
     "input-otp": "1.4.2",
     "lucide-react": "^0.553.0",
-    "next": "16.2.12",
+    "next": "16.4.0",
     "next-themes": "latest",
     "react": "^19.2.0",
     "react-day-picker": "9.11.1",
@@ -82,14 +86,14 @@
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
-    "@next/bundle-analyzer": "^16.0.1",
+    "@next/bundle-analyzer": "^16.4.0",
     "@prettier/plugin-oxc": "^0.0.4",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^24.10.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "eslint": "^9.39.5",
-    "eslint-config-next": "16.2.12",
+    "eslint-config-next": "16.4.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
     "postcss": "^8.5.23",
