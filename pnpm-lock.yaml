@@ -409,8 +409,8 @@ importers:
         specifier: ^1.8.1
         version: 1.8.1(prettier@3.9.10)(supports-color@7.2.0)
       prettier-plugin-packagejson:
-        specifier: ^2.5.22
-        version: 2.5.22(prettier@3.9.10)
+        specifier: ^3.0.2
+        version: 3.0.2(prettier@3.9.10)
       prettier-plugin-sort-json:
         specifier: ^4.2.0
         version: 4.2.0(prettier@3.9.10)
@@ -3608,10 +3608,10 @@ packages:
     peerDependencies:
       prettier: ^3.0.0
 
-  prettier-plugin-packagejson@2.5.22:
-    resolution: {integrity: sha512-G6WalmoUssKF8ZXkni0+n4324K+gG143KPysSQNW+FrR0XyNb3BdRxchGC/Q1FE/F702p7/6KU7r4mv0WSWbzA==}
+  prettier-plugin-packagejson@3.0.2:
+    resolution: {integrity: sha512-kmoj3hEynXwoHDo8ZhmWAIjRBoQWCDUVackiWfSDWdgD0rS3LGB61T9zoVbume/cotYdCoadUh4sqViAmXvpBQ==}
     peerDependencies:
-      prettier: '>= 1.16.0'
+      prettier: ^3
     peerDependenciesMeta:
       prettier:
         optional: true
@@ -7407,7 +7407,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  prettier-plugin-packagejson@2.5.22(prettier@3.9.10):
+  prettier-plugin-packagejson@3.0.2(prettier@3.9.10):
     dependencies:
       sort-package-json: 3.6.0
     optionalDependencies:
