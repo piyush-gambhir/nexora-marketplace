@@ -415,8 +415,8 @@ importers:
         specifier: ^4.2.0
         version: 4.2.0(prettier@3.9.10)
       prettier-plugin-tailwindcss:
-        specifier: ^0.7.1
-        version: 0.7.1(@ianvs/prettier-plugin-sort-imports@4.7.1(@prettier/plugin-oxc@0.0.4)(content-tag@4.2.1)(prettier-plugin-ember-template-tag@2.1.8(prettier@3.9.10)(supports-color@7.2.0))(prettier@3.9.10)(supports-color@7.2.0))(@prettier/plugin-oxc@0.0.4)(prettier-plugin-jsdoc@1.8.1(prettier@3.9.10)(supports-color@7.2.0))(prettier@3.9.10)
+        specifier: ^0.8.1
+        version: 0.8.1(@ianvs/prettier-plugin-sort-imports@4.7.1(@prettier/plugin-oxc@0.0.4)(content-tag@4.2.1)(prettier-plugin-ember-template-tag@2.1.8(prettier@3.9.10)(supports-color@7.2.0))(prettier@3.9.10)(supports-color@7.2.0))(@prettier/plugin-oxc@0.0.4)(prettier-plugin-jsdoc@1.8.1(prettier@3.9.10)(supports-color@7.2.0))(prettier@3.9.10)
       tailwindcss:
         specifier: ^4.3.3
         version: 4.3.3
@@ -3622,8 +3622,8 @@ packages:
     peerDependencies:
       prettier: ^3.0.0
 
-  prettier-plugin-tailwindcss@0.7.1:
-    resolution: {integrity: sha512-Bzv1LZcuiR1Sk02iJTS1QzlFNp/o5l2p3xkopwOrbPmtMeh3fK9rVW5M3neBQzHq+kGKj/4LGQMTNcTH4NGPtQ==}
+  prettier-plugin-tailwindcss@0.8.1:
+    resolution: {integrity: sha512-iaFMYqDsE4ffdDkn5qup0j5f2aCEBFZrdrZnvu9QKTlWx/iGPeQ4HHu7b7fCPMxeo9nwQBiOAh2nSypdFYWJkw==}
     engines: {node: '>=20.19'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
@@ -7417,7 +7417,7 @@ snapshots:
     dependencies:
       prettier: 3.9.10
 
-  prettier-plugin-tailwindcss@0.7.1(@ianvs/prettier-plugin-sort-imports@4.7.1(@prettier/plugin-oxc@0.0.4)(content-tag@4.2.1)(prettier-plugin-ember-template-tag@2.1.8(prettier@3.9.10)(supports-color@7.2.0))(prettier@3.9.10)(supports-color@7.2.0))(@prettier/plugin-oxc@0.0.4)(prettier-plugin-jsdoc@1.8.1(prettier@3.9.10)(supports-color@7.2.0))(prettier@3.9.10):
+  prettier-plugin-tailwindcss@0.8.1(@ianvs/prettier-plugin-sort-imports@4.7.1(@prettier/plugin-oxc@0.0.4)(content-tag@4.2.1)(prettier-plugin-ember-template-tag@2.1.8(prettier@3.9.10)(supports-color@7.2.0))(prettier@3.9.10)(supports-color@7.2.0))(@prettier/plugin-oxc@0.0.4)(prettier-plugin-jsdoc@1.8.1(prettier@3.9.10)(supports-color@7.2.0))(prettier@3.9.10):
     dependencies:
       prettier: 3.9.10
     optionalDependencies:
