@@ -1,7 +1,7 @@
 # Multi-stage Dockerfile for Next.js (Node 24.21.0 LTS, pnpm, standalone runtime)
 
 # Base settings shared across stages
-FROM node:24.21.0-alpine AS base
+FROM node:24.22.1-alpine AS base
 WORKDIR /app
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \
@@ -24,7 +24,7 @@ COPY . .
 RUN pnpm run build
 
 # Production runtime using Next.js standalone output
-FROM node:24.21.0-alpine AS runner
+FROM node:24.22.1-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \
