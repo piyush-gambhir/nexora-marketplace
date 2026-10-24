@@ -16,5 +16,4 @@ export * from '../hooks/use-timeout';
 export * from '../hooks/use-previous';
 export * from '../hooks/use-query-params';
 export * from '../hooks/use-window-size';
-export * from '../hooks/use-toast';
 export * from '../hooks/use-isomorphic-layout-effect';

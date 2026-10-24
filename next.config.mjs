@@ -1,4 +1,5 @@
 const nextConfig = {
+  experimental: { agentUpgrade: 'security' },
   typescript: {
     ignoreBuildErrors: true,
   },
