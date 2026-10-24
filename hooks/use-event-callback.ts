@@ -1,15 +1,14 @@
 'use client';
 
-import { useCallback, useRef } from 'react';
+import { useCallback, useLayoutEffect, useRef } from 'react';
 
-export function useEventCallback<T extends (...args: unknown[]) => unknown>(fn: T): T {
+export function useEventCallback<Args extends unknown[], Result>(
+  fn: (...args: Args) => Result,
+): (...args: Args) => Result {
   const ref = useRef(fn);
-  ref.current = fn;
+  useLayoutEffect(() => {
+    ref.current = fn;
+  }, [fn]);
 
-  const stableCallback = useCallback(
-    (...args: Parameters<T>): ReturnType<T> => ref.current(...args),
-    [],
-  );
-
-  return stableCallback as T;
+  return useCallback((...args: Args) => ref.current(...args), []);
 }
