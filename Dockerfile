@@ -1,7 +1,7 @@
 # Multi-stage Dockerfile for Next.js (Node 24.21.0 LTS, pnpm, standalone runtime)
 
 # Base settings shared across stages
-FROM node:24.22.1-alpine AS base
+FROM node:26.12.1-alpine AS base
 WORKDIR /app
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \
@@ -10,12 +10,12 @@ ENV PATH="$PNPM_HOME:$PATH"
 # Some Next.js deps on Alpine require this for libc compatibility
 RUN apk add --no-cache libc6-compat
 # Use corepack to manage pnpm safely
-RUN corepack enable && corepack prepare pnpm@12.11.2 --activate
+RUN npm install --global --allow-scripts=pnpm pnpm@12.15.0
 
 # Install dependencies (separate layer for better caching)
 FROM base AS deps
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
-RUN pnpm install --frozen-lockfile
+RUN pnpm install --frozen-lockfile --prod=false
 
 # Build stage
 FROM base AS build
@@ -24,7 +24,7 @@ COPY . .
 RUN pnpm run build
 
 # Production runtime using Next.js standalone output
-FROM node:24.22.1-alpine AS runner
+FROM node:26.12.1-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \

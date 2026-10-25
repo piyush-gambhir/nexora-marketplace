@@ -37,7 +37,7 @@ as the basis for a deployed service.
 
 ## Quick start
 
-Requires Node 24 (24.21.0 or newer) and [pnpm](https://pnpm.io/).
+Requires Node 26 (26.12.1 or newer) and [pnpm](https://pnpm.io/).
 
 ```bash
 git clone https://github.com/piyush-gambhir/nexora-marketplace.git
