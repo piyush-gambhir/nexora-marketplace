@@ -1,6 +1,6 @@
 # Node and dependency upgrade review
 
-Reviewed against `origin/release` at `f725f69`, preserving its security changes and typed chart hooks. This private repository is a UI prototype with local mock marketplace data. It has no implemented authentication, checkout, payment, or marketplace backend.
+Reviewed against `origin/release` at `f725f69`, preserving its security changes and typed chart hooks. This public repository contains a UI prototype with local mock marketplace data. It has no implemented authentication, checkout, payment, or marketplace backend.
 
 ## Toolchain
 
