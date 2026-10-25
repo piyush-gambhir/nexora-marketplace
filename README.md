@@ -4,7 +4,7 @@ A configurable marketplace frontend prototype for exploring customer, seller,
 and administrator experiences in a single Next.js application.
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-7.0-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Project status
@@ -37,7 +37,7 @@ as the basis for a deployed service.
 
 ## Quick start
 
-Requires Node 24 (24.21.0 or newer) and [pnpm](https://pnpm.io/).
+Use Node 26.12.1 for local development and pnpm 12.15.0. Node 24.22.1 remains supported for hosting; CI checks both runtimes.
 
 ```bash
 git clone https://github.com/piyush-gambhir/nexora-marketplace.git
@@ -65,6 +65,8 @@ Open <http://localhost:3000>.
 pnpm dev          # local development server
 pnpm build        # production build
 pnpm start        # serve a production build
+pnpm typecheck    # explicit TypeScript 7 CLI
+pnpm typecheck:compat # TypeScript 6 compiler API compatibility
 pnpm lint         # ESLint
 pnpm format:check # verify Prettier formatting
 ```
