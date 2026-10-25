@@ -12,9 +12,12 @@ concurrency:
 
 jobs:
   check:
-    name: Lint, Typecheck, and Build
+    name: Node ${{ matrix.node }}
     runs-on: ubuntu-24.04-arm
     timeout-minutes: 10
+    strategy:
+      matrix:
+        node: ['24.22.1', '26.12.1']
     steps:
       - uses: actions/checkout@v7
 
@@ -24,7 +27,7 @@ jobs:
 
       - uses: actions/setup-node@v7
         with:
-          node-version: '24.22.1'
+          node-version: ${{ matrix.node }}
           cache: pnpm
 
       - name: Install dependencies
@@ -35,6 +38,11 @@ jobs:
 
       - name: Format check
         run: pnpm run format:check
+
+      - name: Typecheck
+        run: pnpm run typecheck
+      - name: Compiler API compatibility
+        run: pnpm run typecheck:compat
 
       - name: Production build
         run: pnpm run build

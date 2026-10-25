@@ -1,4 +1,4 @@
-# Multi-stage Dockerfile for Next.js (Node 24.21.0 LTS, pnpm, standalone runtime)
+# Multi-stage Dockerfile for Next.js (Node 26.12.1, pnpm, standalone runtime)
 
 # Base settings shared across stages
 FROM node:26.12.1-alpine AS base
@@ -9,7 +9,7 @@ ENV NODE_ENV=production \
 ENV PATH="$PNPM_HOME:$PATH"
 # Some Next.js deps on Alpine require this for libc compatibility
 RUN apk add --no-cache libc6-compat
-# Use corepack to manage pnpm safely
+# Node 26 no longer bundles Corepack.
 RUN npm install --global --allow-scripts=pnpm pnpm@12.15.0
 
 # Install dependencies (separate layer for better caching)
@@ -28,7 +28,8 @@ FROM node:26.12.1-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \
-    PORT=3000
+    PORT=3000 \
+    HOSTNAME=0.0.0.0
 RUN apk add --no-cache libc6-compat \
   && addgroup -S nodejs && adduser -S nextjs -G nodejs
 
