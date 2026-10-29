@@ -37,7 +37,7 @@ as the basis for a deployed service.
 
 ## Quick start
 
-Use Node 26.12.1 for local development and pnpm 12.15.0. Node 24.22.1 remains supported for hosting; CI checks both runtimes.
+Use Node 26.13.0 for local development and pnpm 12.15.0. CI uses Node 26.13.0; hosting uses the explicit `26.x` engine range.
 
 ```bash
 git clone https://github.com/piyush-gambhir/nexora-marketplace.git
