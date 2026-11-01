@@ -1,0 +1,496 @@
+{
+  "date": "2026-10-29",
+  "repository": "piyush-gambhir/nexora-marketplace",
+  "base": "release",
+  "base_sha": "79bc0bb50f1113d35208c55de85f9fa571a3fe5b",
+  "mode": "audit",
+  "publication_blocker": null,
+  "apps": [
+    {
+      "path": ".",
+      "declared_next": "16.4.3",
+      "installed_next": "16.4.3",
+      "snapshot": "audit-20261029-baseline",
+      "graph_sha256": "6a54679aa63337c73b81db7d5098497c30d4e0ceca446e6b85cf6085ff8caadc",
+      "error": null,
+      "analysis": {
+        "meta": {
+          "type": "meta",
+          "schema_version": 1,
+          "snapshot_name": "audit-20261029-baseline",
+          "module_index_hash": "310a8f08382d8557",
+          "route_count": 12,
+          "selected_routes": 12
+        },
+        "record_counts": {
+          "meta": 1,
+          "module": 3290,
+          "route": 12,
+          "output": 1869,
+          "part": 10906,
+          "group": 163
+        },
+        "metric": "Sum of attributed compressed bytes for JavaScript outputs with [client-fs] provenance; includes deferred outputs and is not measured transfer or initial-load size.",
+        "unique_client_js_compressed_attribution": 702408,
+        "route_stats": [
+          {
+            "route": "/seller/dashboard",
+            "client_js_compressed_attribution": 567903,
+            "bootstrap_js_compressed_attribution": 164045,
+            "client_js_files": 11,
+            "entries_coverage": "exact",
+            "groups_coverage": "exact"
+          },
+          {
+            "route": "/",
+            "client_js_compressed_attribution": 366234,
+            "bootstrap_js_compressed_attribution": 164045,
+            "client_js_files": 11,
+            "entries_coverage": "exact",
+            "groups_coverage": "exact"
+          },
+          {
+            "route": "/privacy",
+            "client_js_compressed_attribution": 344128,
+            "bootstrap_js_compressed_attribution": 164045,
+            "client_js_files": 11,
+            "entries_coverage": "exact",
+            "groups_coverage": "exact"
+          },
+          {
+            "route": "/terms",
+            "client_js_compressed_attribution": 344128,
+            "bootstrap_js_compressed_attribution": 164045,
+            "client_js_files": 11,
+            "entries_coverage": "exact",
+            "groups_coverage": "exact"
+          },
+          {
+            "route": "/otp",
+            "client_js_compressed_attribution": 234760,
+            "bootstrap_js_compressed_attribution": 164045,
+            "client_js_files": 9,
+            "entries_coverage": "exact",
+            "groups_coverage": "exact"
+          },
+          {
+            "route": "/login",
+            "client_js_compressed_attribution": 232832,
+            "bootstrap_js_compressed_attribution": 164045,
+            "client_js_files": 9,
+            "entries_coverage": "exact",
+            "groups_coverage": "exact"
+          },
+          {
+            "route": "/signup",
+            "client_js_compressed_attribution": 229800,
+            "bootstrap_js_compressed_attribution": 164045,
+            "client_js_files": 9,
+            "entries_coverage": "exact",
+            "groups_coverage": "exact"
+          },
+          {
+            "route": "/_not-found",
+            "client_js_compressed_attribution": 211572,
+            "bootstrap_js_compressed_attribution": 164045,
+            "client_js_files": 7,
+            "entries_coverage": "exact",
+            "groups_coverage": "exact"
+          },
+          {
+            "route": "/admin/dashboard",
+            "client_js_compressed_attribution": 211572,
+            "bootstrap_js_compressed_attribution": 164045,
+            "client_js_files": 7,
+            "entries_coverage": "exact",
+            "groups_coverage": "exact"
+          },
+          {
+            "route": "/customer/dashboard",
+            "client_js_compressed_attribution": 211572,
+            "bootstrap_js_compressed_attribution": 164045,
+            "client_js_files": 7,
+            "entries_coverage": "exact",
+            "groups_coverage": "exact"
+          },
+          {
+            "route": "/marketplace/dashboard",
+            "client_js_compressed_attribution": 211572,
+            "bootstrap_js_compressed_attribution": 164045,
+            "client_js_files": 7,
+            "entries_coverage": "exact",
+            "groups_coverage": "exact"
+          },
+          {
+            "route": "/favicon.ico",
+            "client_js_compressed_attribution": 0,
+            "bootstrap_js_compressed_attribution": 0,
+            "client_js_files": 0,
+            "entries_coverage": "exact",
+            "groups_coverage": "exact"
+          }
+        ],
+        "top_sources": [
+          {
+            "source": "node_modules/next/dist/compiled/react-dom/cjs/react-dom-client.production.js",
+            "compressed_attribution": 63931,
+            "routes": [
+              "/",
+              "/_not-found",
+              "/admin/dashboard",
+              "/customer/dashboard",
+              "/login",
+              "/marketplace/dashboard",
+              "/otp",
+              "/privacy",
+              "/seller/dashboard",
+              "/signup",
+              "/terms"
+            ]
+          },
+          {
+            "source": "node_modules/next/dist/build/polyfills/polyfill-nomodule.js",
+            "compressed_attribution": 39434,
+            "routes": [
+              "/",
+              "/_not-found",
+              "/admin/dashboard",
+              "/customer/dashboard",
+              "/login",
+              "/marketplace/dashboard",
+              "/otp",
+              "/privacy",
+              "/seller/dashboard",
+              "/signup",
+              "/terms"
+            ]
+          },
+          {
+            "source": "node_modules/@paper-design/shaders/dist/get-shader-noise-texture.js",
+            "compressed_attribution": 18362,
+            "routes": ["/"]
+          },
+          {
+            "source": "node_modules/@dnd-kit/core/dist/core.esm.js",
+            "compressed_attribution": 11379,
+            "routes": ["/seller/dashboard"]
+          },
+          {
+            "source": "node_modules/zod/v4/core/schemas.js",
+            "compressed_attribution": 9009,
+            "routes": ["/seller/dashboard"]
+          },
+          {
+            "source": "node_modules/vaul/dist/index.mjs",
+            "compressed_attribution": 8491,
+            "routes": ["/seller/dashboard"]
+          },
+          {
+            "source": "node_modules/tailwind-merge/dist/bundle-mjs.mjs",
+            "compressed_attribution": 8411,
+            "routes": ["/", "/login", "/otp", "/privacy", "/seller/dashboard", "/signup", "/terms"]
+          },
+          {
+            "source": "node_modules/next/dist/client/app-dir/link.js",
+            "compressed_attribution": 7944,
+            "routes": ["/", "/login", "/otp", "/privacy", "/signup", "/terms"]
+          },
+          {
+            "source": "node_modules/next/dist/compiled/react-server-dom-turbopack/cjs/react-server-dom-turbopack-client.browser.production.js",
+            "compressed_attribution": 7781,
+            "routes": [
+              "/",
+              "/_not-found",
+              "/admin/dashboard",
+              "/customer/dashboard",
+              "/login",
+              "/marketplace/dashboard",
+              "/otp",
+              "/privacy",
+              "/seller/dashboard",
+              "/signup",
+              "/terms"
+            ]
+          },
+          {
+            "source": "node_modules/next/dist/compiled/buffer/index.js",
+            "compressed_attribution": 7150,
+            "routes": ["/seller/dashboard"]
+          },
+          {
+            "source": "node_modules/@radix-ui/react-select/dist/index.mjs",
+            "compressed_attribution": 6590,
+            "routes": ["/seller/dashboard"]
+          },
+          {
+            "source": "node_modules/motion-dom/dist/es/projection/node/create-projection-node.mjs",
+            "compressed_attribution": 6457,
+            "routes": ["/", "/privacy", "/terms"]
+          },
+          {
+            "source": "node_modules/next/dist/client/components/segment-cache/cache.js",
+            "compressed_attribution": 6404,
+            "routes": [
+              "/",
+              "/_not-found",
+              "/admin/dashboard",
+              "/customer/dashboard",
+              "/login",
+              "/marketplace/dashboard",
+              "/otp",
+              "/privacy",
+              "/seller/dashboard",
+              "/signup",
+              "/terms"
+            ]
+          },
+          {
+            "source": "node_modules/decimal.js-light/decimal.js",
+            "compressed_attribution": 5569,
+            "routes": ["/seller/dashboard"]
+          },
+          {
+            "source": "node_modules/recharts/es6/state/selectors/axisSelectors.js",
+            "compressed_attribution": 5567,
+            "routes": ["/seller/dashboard"]
+          },
+          {
+            "source": "node_modules/next/dist/shared/lib/utils.js",
+            "compressed_attribution": 5367,
+            "routes": ["/", "/login", "/otp", "/privacy", "/signup", "/terms"]
+          },
+          {
+            "source": "node_modules/sonner/dist/index.mjs",
+            "compressed_attribution": 4442,
+            "routes": ["/seller/dashboard"]
+          },
+          {
+            "source": "node_modules/@reduxjs/toolkit/dist/redux-toolkit.modern.mjs",
+            "compressed_attribution": 4356,
+            "routes": ["/seller/dashboard"]
+          },
+          {
+            "source": "components/data-table.tsx",
+            "compressed_attribution": 4278,
+            "routes": ["/seller/dashboard"]
+          },
+          {
+            "source": "node_modules/zod/v4/core/util.js",
+            "compressed_attribution": 4056,
+            "routes": ["/seller/dashboard"]
+          }
+        ],
+        "top_packages": [
+          ["next", 231588],
+          ["recharts", 104593],
+          ["motion-dom", 51729],
+          ["(application)", 43807],
+          ["zod", 33576],
+          ["@paper-design/shaders", 22937],
+          ["@tanstack/table-core", 19267],
+          ["es-toolkit", 12505],
+          ["@dnd-kit/core", 11379],
+          ["framer-motion", 11157],
+          ["vaul", 8491],
+          ["tailwind-merge", 8411],
+          ["immer", 6768],
+          ["d3-scale", 6729],
+          ["@radix-ui/react-select", 6590]
+        ],
+        "duplicate_browser_versions": {
+          "immer": ["10.2.0", "11.1.21"]
+        },
+        "graph": {
+          "emitted_members": 276,
+          "sync_edges": 737,
+          "async_edges": 0,
+          "communities": 12,
+          "parameters": "NetworkX Louvain, resolution=1, weight=1 per distinct directed edge/kind before symmetrization, seed=0; seed=1 stability comparison.",
+          "stable_partition_across_seeds": false,
+          "ranked_communities": [
+            {
+              "community": 11,
+              "modules": 55,
+              "unambiguous_compressed_attribution": 105777,
+              "largest_packages": [
+                ["next", 104484],
+                ["react-is", 759],
+                ["use-sync-external-store", 458],
+                ["@swc/helpers", 76]
+              ]
+            },
+            {
+              "community": 0,
+              "modules": 55,
+              "unambiguous_compressed_attribution": 59871,
+              "largest_packages": [
+                ["(application)", 29837],
+                ["next", 5352],
+                ["recharts", 3671],
+                ["@radix-ui/react-collection", 2955]
+              ]
+            },
+            {
+              "community": 6,
+              "modules": 45,
+              "unambiguous_compressed_attribution": 52225,
+              "largest_packages": [["next", 52225]]
+            },
+            {
+              "community": 10,
+              "modules": 43,
+              "unambiguous_compressed_attribution": 19961,
+              "largest_packages": [
+                ["next", 18114],
+                ["@vercel/analytics", 1527],
+                ["@swc/helpers", 320]
+              ]
+            },
+            {
+              "community": 2,
+              "modules": 53,
+              "unambiguous_compressed_attribution": 18767,
+              "largest_packages": [
+                ["es-toolkit", 11617],
+                ["next", 7150]
+              ]
+            },
+            {
+              "community": 9,
+              "modules": 1,
+              "unambiguous_compressed_attribution": 5569,
+              "largest_packages": [["decimal.js-light", 5569]]
+            },
+            {
+              "community": 8,
+              "modules": 4,
+              "unambiguous_compressed_attribution": 2038,
+              "largest_packages": [["next", 2038]]
+            },
+            {
+              "community": 1,
+              "modules": 6,
+              "unambiguous_compressed_attribution": 1658,
+              "largest_packages": [["next", 1658]]
+            }
+          ],
+          "unmapped_or_ambiguous_compressed_attribution": 432641
+        },
+        "candidates": [
+          {
+            "package": "recharts",
+            "unique_compressed_attribution": 104593,
+            "route": "/seller/dashboard",
+            "roots": [
+              "[project]/components/app-sidebar.tsx [app-client] (ecmascript)",
+              "[project]/components/chart-area-interactive.tsx [app-client] (ecmascript)",
+              "[project]/components/data-table.tsx [app-client] (ecmascript)",
+              "[project]/components/ui/separator.tsx [app-client] (ecmascript)",
+              "[project]/components/ui/sidebar.tsx [app-client] (ecmascript)",
+              "[project]/node_modules/.pnpm/@vercel+analytics@2.0.1_next@16.4.3_@babel+core@7.29.6_supports-color@7.2.0__@types+nod_6a042d9d1613424c7ed92f298a3675f4/node_modules/@vercel/analytics/dist/next/index.mjs [app-client] (ecmascript)",
+              "[project]/node_modules/.pnpm/next@16.4.3_@babel+core@7.29.6_supports-color@7.2.0__@types+node@26.6.5_react-dom@19.3.1_react@19.3.1__react@19.3.1/node_modules/next/dist/client/app-next-turbopack.js [app-client] (ecmascript)",
+              "[project]/node_modules/.pnpm/next@16.4.3_@babel+core@7.29.6_supports-color@7.2.0__@types+node@26.6.5_react-dom@19.3.1_react@19.3.1__react@19.3.1/node_modules/next/dist/client/components/builtin/global-error.js [app-client] (ecmascript)",
+              "[project]/node_modules/.pnpm/next@16.4.3_@babel+core@7.29.6_supports-color@7.2.0__@types+node@26.6.5_react-dom@19.3.1_react@19.3.1__react@19.3.1/node_modules/next/dist/client/components/client-page.js [app-client] (ecmascript)",
+              "[project]/node_modules/.pnpm/next@16.4.3_@babel+core@7.29.6_supports-color@7.2.0__@types+node@26.6.5_react-dom@19.3.1_react@19.3.1__react@19.3.1/node_modules/next/dist/client/components/client-segment.js [app-client] (ecmascript)",
+              "[project]/node_modules/.pnpm/next@16.4.3_@babel+core@7.29.6_supports-color@7.2.0__@types+node@26.6.5_react-dom@19.3.1_react@19.3.1__react@19.3.1/node_modules/next/dist/client/components/http-access-fallback/error-boundary.js [app-client] (ecmascript)",
+              "[project]/node_modules/.pnpm/next@16.4.3_@babel+core@7.29.6_supports-color@7.2.0__@types+node@26.6.5_react-dom@19.3.1_react@19.3.1__react@19.3.1/node_modules/next/dist/client/components/layout-router.js [app-client] (ecmascript)",
+              "[project]/node_modules/.pnpm/next@16.4.3_@babel+core@7.29.6_supports-color@7.2.0__@types+node@26.6.5_react-dom@19.3.1_react@19.3.1__react@19.3.1/node_modules/next/dist/client/components/render-from-template-context.js [app-client] (ecmascript)",
+              "[project]/node_modules/.pnpm/next@16.4.3_@babel+core@7.29.6_supports-color@7.2.0__@types+node@26.6.5_react-dom@19.3.1_react@19.3.1__react@19.3.1/node_modules/next/dist/lib/framework/boundary-components.js [app-client] (ecmascript)",
+              "[project]/node_modules/.pnpm/next@16.4.3_@babel+core@7.29.6_supports-color@7.2.0__@types+node@26.6.5_react-dom@19.3.1_react@19.3.1__react@19.3.1/node_modules/next/dist/lib/metadata/generate/icon-mark.js [app-client] (ecmascript)"
+            ],
+            "targets": [
+              "[project]/node_modules/.pnpm/recharts@3.10.1_@types+react@19.3.0_react-dom@19.3.1_react@19.3.1__react-is@16.13.1_react@19.3.1_redux@5.0.1/node_modules/recharts/es6/cartesian/Area.js [app-client] (ecmascript)"
+            ],
+            "missing_roots": 0,
+            "status": "provisional; render optionality and browser timing are unverified",
+            "cut": [],
+            "cut_capacity": 1678,
+            "cut_status": "No editable cut with bootstrap, client-reference roots, layouts and dependency internals protected."
+          },
+          {
+            "package": "motion-dom",
+            "unique_compressed_attribution": 51729,
+            "route": null,
+            "roots": [],
+            "targets": [],
+            "missing_roots": 0,
+            "status": "attribution-only investigation; exact emitted identity membership is unavailable",
+            "cut": [],
+            "cut_status": "A directed cut cannot be established for this attributed contributor because no exact emitted module membership joins to it."
+          },
+          {
+            "package": "zod",
+            "unique_compressed_attribution": 33576,
+            "route": null,
+            "roots": [],
+            "targets": [],
+            "missing_roots": 0,
+            "status": "attribution-only investigation; exact emitted identity membership is unavailable",
+            "cut": [],
+            "cut_status": "A directed cut cannot be established for this attributed contributor because no exact emitted module membership joins to it."
+          },
+          {
+            "package": "@paper-design/shaders",
+            "unique_compressed_attribution": 22937,
+            "route": null,
+            "roots": [],
+            "targets": [],
+            "missing_roots": 0,
+            "status": "attribution-only investigation; exact emitted identity membership is unavailable",
+            "cut": [],
+            "cut_status": "A directed cut cannot be established for this attributed contributor because no exact emitted module membership joins to it."
+          },
+          {
+            "package": "@tanstack/table-core",
+            "unique_compressed_attribution": 19267,
+            "route": null,
+            "roots": [],
+            "targets": [],
+            "missing_roots": 0,
+            "status": "attribution-only investigation; exact emitted identity membership is unavailable",
+            "cut": [],
+            "cut_status": "A directed cut cannot be established for this attributed contributor because no exact emitted module membership joins to it."
+          }
+        ],
+        "client_dependency_scan": [],
+        "possible_server_only_leaks": [],
+        "suppressed_matches": [],
+        "coverage": {
+          "unsupported_client_js_outputs": [],
+          "unknown_route_entries": [],
+          "unknown_route_groups": [],
+          "groups_without_joined_trigger": 0,
+          "sync_dependencies_absent_from_emitted_subgraph": 139,
+          "attribution_conflicts": 0,
+          "action_like_identities_requiring_source_mapping": 2,
+          "limits": [
+            "All minimum cuts are provisional; optionality, module side effects and actual mount/preload timing have not been behavior-tested.",
+            "Source-to-output attribution is distinct from exact module identity; ambiguous community bytes are excluded from community ranking.",
+            "No production browser requests, cold-navigation timing, interaction timing, Web Vitals or emitted implementation contents were inspected.",
+            "Potential Server Action stubs and ownership matches remain unverified until source-to-reference mapping and emitted contents are inspected."
+          ]
+        }
+      }
+    }
+  ],
+  "verification": [
+    {
+      "app": ".",
+      "command": "pnpm run typecheck",
+      "exit_code": 0,
+      "seconds": 1.0
+    },
+    {
+      "app": ".",
+      "command": "pnpm run lint",
+      "exit_code": 0,
+      "seconds": 3.0
+    },
+    {
+      "app": "(repository)",
+      "command": "git diff --check",
+      "exit_code": 0,
+      "seconds": 0.0
+    }
+  ]
+}
