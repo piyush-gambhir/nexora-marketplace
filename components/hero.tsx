@@ -33,7 +33,6 @@ export default function Hero() {
   return (
     <>
       <div className="relative flex min-h-screen flex-col items-center justify-center px-4 py-12 pt-24 sm:px-6 sm:py-20 sm:pt-28">
-        {/* GodRays Background */}
         <div className="absolute inset-0 will-change-transform">
           <GodRays
             colorBack="#00000000"
@@ -248,7 +247,6 @@ export default function Hero() {
 
                 <div className="w-full flex-1">
                   <form className="space-y-4 sm:space-y-5">
-                    {/* Name Field */}
                     <div>
                       <label
                         htmlFor="name"
@@ -264,7 +262,6 @@ export default function Hero() {
                       />
                     </div>
 
-                    {/* Work Email Field */}
                     <div>
                       <label
                         htmlFor="email"
@@ -322,7 +319,6 @@ export default function Hero() {
                       </div>
                     </div>
 
-                    {/* Message Field */}
                     <div>
                       <label
                         htmlFor="message"
@@ -338,7 +334,6 @@ export default function Hero() {
                       />
                     </div>
 
-                    {/* Submit Button */}
                     <button
                       type="submit"
                       className="h-10 w-full rounded-full bg-white px-8 py-2.5 font-medium tracking-[-0.03em] text-[#0041C1] transition-colors hover:bg-white/90"
@@ -349,7 +344,6 @@ export default function Hero() {
                 </div>
               </motion.div>
 
-              {/* Close Button */}
               <motion.button
                 onClick={handleClose}
                 className="absolute top-6 right-6 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-transparent text-white transition-colors hover:bg-white/10"
