@@ -122,7 +122,6 @@ export const schema = z.object({
   reviewer: z.string(),
 });
 
-
 function DragHandle({ id }: { id: number }) {
   const { attributes, listeners } = useSortable({
     id,
@@ -141,8 +140,6 @@ function DragHandle({ id }: { id: number }) {
     </Button>
   );
 }
-
-
 
 const features = tableFeatures({
   rowSelectionFeature,

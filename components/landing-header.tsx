@@ -30,7 +30,6 @@ export function LandingHeader() {
           <span className="text-lg font-semibold">Nexora</span>
         </Link>
 
-
         <div className="mx-4 hidden max-w-xs flex-1 lg:flex">
           <div className="relative w-full">
             <Search className="text-muted-foreground absolute top-1/2 left-2.5 size-4 -translate-y-1/2" />
@@ -70,7 +69,6 @@ export function LandingHeader() {
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-3">
-
           <Button
             variant="ghost"
             size="icon"
@@ -84,7 +82,6 @@ export function LandingHeader() {
               <ShoppingCart className="size-5" />
             </Link>
           </Button>
-
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -132,7 +129,6 @@ export function LandingHeader() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-
           <div className="hidden items-center gap-2 sm:flex">
             <Button
               variant="ghost"
@@ -145,7 +141,6 @@ export function LandingHeader() {
             </Button>
           </div>
 
-
           <Button
             variant="ghost"
             size="icon"
@@ -157,7 +152,6 @@ export function LandingHeader() {
           </Button>
         </div>
       </div>
-
 
       {mobileMenuOpen && (
         <div className="border-border/40 bg-background/95 mt-2 space-y-3 rounded-2xl border p-4 backdrop-blur-xl md:hidden">

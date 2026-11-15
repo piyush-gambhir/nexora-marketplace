@@ -1,4 +1,3 @@
-
 export const DAYS_OF_WEEK = {
   SUNDAY: 0,
   MONDAY: 1,
@@ -8,7 +7,6 @@ export const DAYS_OF_WEEK = {
   FRIDAY: 5,
   SATURDAY: 6,
 } as const;
-
 
 export const MONTHS = {
   JANUARY: 0,
@@ -486,7 +484,6 @@ export function doDateRangesOverlap(
 export function mergeDateRanges(ranges: Array<[Date, Date]>): Array<[Date, Date]> {
   if (ranges.length === 0) return [];
 
-
   const sorted = [...ranges].sort((a, b) => a[0].getTime() - b[0].getTime());
 
   const merged: Array<[Date, Date]> = [sorted[0]];
@@ -496,10 +493,8 @@ export function mergeDateRanges(ranges: Array<[Date, Date]>): Array<[Date, Date]
     const lastMerged = merged[merged.length - 1];
 
     if (current[0] <= lastMerged[1]) {
-
       lastMerged[1] = new Date(Math.max(lastMerged[1].getTime(), current[1].getTime()));
     } else {
-
       merged.push(current);
     }
   }

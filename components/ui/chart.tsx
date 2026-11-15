@@ -6,7 +6,6 @@ import * as RechartsPrimitive from 'recharts';
 
 import { cn } from '@/lib/utils';
 
-
 const THEMES = { light: '', dark: '.dark' } as const;
 
 export type ChartConfig = {
@@ -293,7 +292,6 @@ function ChartLegendContent({
     </div>
   );
 }
-
 
 function getPayloadConfigFromPayload(config: ChartConfig, payload: unknown, key: string) {
   if (typeof payload !== 'object' || payload === null) {

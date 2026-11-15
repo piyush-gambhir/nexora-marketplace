@@ -8,7 +8,6 @@ const eslintConfig = defineConfig([
   {
     // This UI prototype includes generated shadcn-style hooks and components
 
-
     rules: {
       'react-hooks/purity': 'off',
       'react-hooks/refs': 'off',
