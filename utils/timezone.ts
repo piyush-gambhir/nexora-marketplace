@@ -18,10 +18,8 @@ export function getTimezoneOffset(date: Date | string | number, timezone?: strin
   const dateObj = typeof date === 'object' ? date : new Date(date);
   const tz = timezone || getUserTimezone();
 
-  // Get the UTC time
   const utcTime = dateObj.getTime();
 
-  // Format the date in the target timezone
   const tzDateString = new Intl.DateTimeFormat('en-US', {
     timeZone: tz,
     year: 'numeric',
@@ -33,7 +31,6 @@ export function getTimezoneOffset(date: Date | string | number, timezone?: strin
     hour12: false,
   }).format(dateObj);
 
-  // Parse the formatted string back to get the local time
   const [datePart, timePart] = tzDateString.split(', ');
   const [month, day, year] = datePart.split('/');
   const [hour, minute, second] = timePart.split(':');
@@ -47,7 +44,6 @@ export function getTimezoneOffset(date: Date | string | number, timezone?: strin
     parseInt(second),
   );
 
-  // Calculate offset in minutes
   return (tzDate.getTime() - utcTime) / 60000;
 }
 
@@ -66,11 +62,9 @@ export function convertTimezone(
 ): Date {
   const dateObj = typeof date === 'object' ? date : new Date(date);
 
-  // Format in both timezones to get the time difference
   const fromOffset = getTimezoneOffset(dateObj, fromTimezone);
   const toOffset = getTimezoneOffset(dateObj, toTimezone);
 
-  // Calculate the difference and adjust
   const offsetDiff = toOffset - fromOffset;
   return new Date(dateObj.getTime() + offsetDiff * 60000);
 }
@@ -131,7 +125,6 @@ export function getTimezoneAbbreviation(
       timeZoneName: 'short',
     }).format(dateObj);
 
-    // Extract the timezone abbreviation from the formatted string
     const match = formatted.match(/\b[A-Z]{3,5}\b/);
     return match ? match[0] : '';
   } catch (error) {
@@ -162,7 +155,6 @@ export function getTimezoneName(
       timeZoneName: 'long',
     }).format(dateObj);
 
-    // Extract the timezone name (everything after the comma and space)
     const parts = formatted.split(', ');
     return parts.length > 1 ? parts[parts.length - 1] : '';
   } catch (error) {
@@ -182,18 +174,14 @@ export function isDaylightSavingTime(date: Date | string | number, timezone?: st
   const dateObj = typeof date === 'object' ? date : new Date(date);
   const tz = timezone || getUserTimezone();
 
-  // Get offset in January (typically standard time in Northern Hemisphere)
   const jan = new Date(dateObj.getFullYear(), 0, 1);
   const janOffset = getTimezoneOffset(jan, tz);
 
-  // Get offset in July (typically daylight time in Northern Hemisphere)
   const jul = new Date(dateObj.getFullYear(), 6, 1);
   const julOffset = getTimezoneOffset(jul, tz);
 
-  // Get offset for the current date
   const currentOffset = getTimezoneOffset(dateObj, tz);
 
-  // DST is active when the offset differs from standard time
   const standardOffset = Math.max(janOffset, julOffset);
   return currentOffset !== standardOffset;
 }
@@ -354,7 +342,6 @@ export function scheduleInTimezone(
   const targetDate = typeof targetTime === 'object' ? targetTime : new Date(targetTime);
   const now = new Date();
 
-  // Convert target time to local time
   const targetLocal = convertTimezone(targetDate, timezone, getUserTimezone());
 
   const delay = targetLocal.getTime() - now.getTime();

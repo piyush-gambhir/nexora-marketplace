@@ -36,7 +36,6 @@ export function LandingFooter() {
       <footer className="border-border/40 bg-background/80 supports-[backdrop-filter]:bg-background/60 border-t backdrop-blur-xl">
         <div className="container mx-auto px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
           <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:gap-x-8 sm:gap-y-8 md:grid-cols-3 lg:gap-x-12 lg:gap-y-12">
-            {/* Brand Section */}
             <div className="col-span-2 md:col-span-1">
               <Link
                 href="/"
@@ -53,7 +52,6 @@ export function LandingFooter() {
               </p>
             </div>
 
-            {/* Product Links */}
             <div>
               <h3 className="mb-3 text-sm font-semibold sm:mb-4">Product</h3>
               <ul className="space-y-1.5 sm:space-y-2">
@@ -84,7 +82,6 @@ export function LandingFooter() {
               </ul>
             </div>
 
-            {/* Company Links */}
             <div>
               <h3 className="mb-3 text-sm font-semibold sm:mb-4">Company</h3>
               <ul className="space-y-1.5 sm:space-y-2">
@@ -124,7 +121,6 @@ export function LandingFooter() {
             </div>
           </div>
 
-          {/* Bottom Section */}
           <div className="border-border/40 mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 sm:flex-row">
             <p className="text-muted-foreground text-sm">
               © {currentYear} Nexora. All rights reserved.
@@ -162,7 +158,6 @@ export function LandingFooter() {
         </div>
       </footer>
 
-      {/* Demo Modal - Same as Hero */}
       <AnimatePresence initial={false}>
         {isExpanded && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-2">
@@ -299,7 +294,6 @@ export function LandingFooter() {
 
                 <div className="w-full flex-1">
                   <form className="space-y-4 sm:space-y-5">
-                    {/* Name Field */}
                     <div>
                       <label
                         htmlFor="footer-name"
@@ -315,7 +309,6 @@ export function LandingFooter() {
                       />
                     </div>
 
-                    {/* Work Email Field */}
                     <div>
                       <label
                         htmlFor="footer-email"
@@ -373,7 +366,6 @@ export function LandingFooter() {
                       </div>
                     </div>
 
-                    {/* Message Field */}
                     <div>
                       <label
                         htmlFor="footer-message"
@@ -389,7 +381,6 @@ export function LandingFooter() {
                       />
                     </div>
 
-                    {/* Submit Button */}
                     <button
                       type="submit"
                       className="h-10 w-full cursor-pointer rounded-full bg-white px-8 py-2.5 font-medium tracking-[-0.03em] text-[#0041C1] transition-colors hover:bg-white/90"
@@ -400,7 +391,6 @@ export function LandingFooter() {
                 </div>
               </motion.div>
 
-              {/* Close Button */}
               <motion.button
                 onClick={handleClose}
                 className="absolute top-6 right-6 z-10 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-transparent text-white transition-colors hover:bg-white/10"
