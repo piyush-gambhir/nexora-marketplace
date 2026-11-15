@@ -5,7 +5,7 @@ import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 export interface UseLocalStorageOptions<T> {
   serializer?: (value: T) => string;
   deserializer?: (value: string) => T;
-  sync?: boolean; // sync state across tabs via storage events
+  sync?: boolean;
 }
 
 export function useLocalStorage<T>(
@@ -54,7 +54,7 @@ export function useLocalStorage<T>(
       if (e.newValue === null) return;
       try {
         const next = deserializer(e.newValue);
-        // Avoid setting twice on the tab that originated the change
+
         if (!isFirstLoad.current) setStoredValue(next);
       } catch (err) {
         console.error(err);

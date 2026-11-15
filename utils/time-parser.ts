@@ -9,7 +9,7 @@ export function parseTime(timeString: string, baseDate: Date = new Date()): Date
   try {
     const trimmed = timeString.trim();
 
-    // Try parsing 12-hour format with AM/PM
+
     const time12HourRegex = /^(\d{1,2}):(\d{2})(?::(\d{2}))?\s*(AM|PM)$/i;
     const match12 = trimmed.match(time12HourRegex);
 
@@ -19,7 +19,7 @@ export function parseTime(timeString: string, baseDate: Date = new Date()): Date
       const seconds = match12[3] ? parseInt(match12[3]) : 0;
       const period = match12[4].toUpperCase();
 
-      // Convert to 24-hour format
+
       if (period === 'PM' && hours !== 12) {
         hours += 12;
       } else if (period === 'AM' && hours === 12) {
@@ -31,7 +31,7 @@ export function parseTime(timeString: string, baseDate: Date = new Date()): Date
       return result;
     }
 
-    // Try parsing 24-hour format
+
     const time24HourRegex = /^(\d{1,2}):(\d{2})(?::(\d{2}))?$/;
     const match24 = trimmed.match(time24HourRegex);
 
@@ -71,7 +71,7 @@ export function parseDate(dateString: string): Date | null {
   try {
     const trimmed = dateString.trim();
 
-    // Try ISO format (YYYY-MM-DD)
+
     const isoRegex = /^(\d{4})-(\d{1,2})-(\d{1,2})$/;
     const isoMatch = trimmed.match(isoRegex);
 
@@ -86,7 +86,7 @@ export function parseDate(dateString: string): Date | null {
       }
     }
 
-    // Try US format (MM/DD/YYYY)
+
     const usRegex = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
     const usMatch = trimmed.match(usRegex);
 
@@ -101,7 +101,7 @@ export function parseDate(dateString: string): Date | null {
       }
     }
 
-    // Try European format (DD/MM/YYYY)
+
     const euRegex = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
     const euMatch = trimmed.match(euRegex);
 
@@ -116,7 +116,7 @@ export function parseDate(dateString: string): Date | null {
       }
     }
 
-    // Try using native Date parser as fallback
+
     const date = new Date(trimmed);
     if (!isNaN(date.getTime())) {
       return date;
@@ -138,13 +138,13 @@ export function parseDateTime(dateTimeString: string): Date | null {
   try {
     const trimmed = dateTimeString.trim();
 
-    // Try ISO 8601 format
+
     const isoDate = new Date(trimmed);
     if (!isNaN(isoDate.getTime())) {
       return isoDate;
     }
 
-    // Try splitting on common separators
+
     const separators = [' at ', ' ', 'T'];
     for (const sep of separators) {
       const parts = trimmed.split(sep);
@@ -179,12 +179,12 @@ export function parseRelativeTime(
   try {
     const trimmed = relativeString.trim().toLowerCase();
 
-    // Handle "now"
+
     if (trimmed === 'now') {
       return new Date(baseDate);
     }
 
-    // Handle "today", "tomorrow", "yesterday"
+
     if (trimmed === 'today') {
       return new Date(baseDate);
     }
@@ -199,7 +199,7 @@ export function parseRelativeTime(
       return result;
     }
 
-    // Parse "X units ago" or "in X units"
+
     const agoRegex = /^(\d+)\s+(second|minute|hour|day|week|month|year)s?\s+ago$/;
     const inRegex = /^in\s+(\d+)\s+(second|minute|hour|day|week|month|year)s?$/;
 
@@ -258,7 +258,7 @@ export function parseNaturalDate(naturalString: string, baseDate: Date = new Dat
   try {
     const trimmed = naturalString.trim().toLowerCase();
 
-    // Days of the week
+
     const daysMap: Record<string, number> = {
       sunday: 0,
       monday: 1,
@@ -269,7 +269,7 @@ export function parseNaturalDate(naturalString: string, baseDate: Date = new Dat
       saturday: 6,
     };
 
-    // Handle "next [day]"
+
     const nextDayRegex = /^next\s+(sunday|monday|tuesday|wednesday|thursday|friday|saturday)$/;
     const nextMatch = trimmed.match(nextDayRegex);
 
@@ -282,7 +282,7 @@ export function parseNaturalDate(naturalString: string, baseDate: Date = new Dat
       return result;
     }
 
-    // Handle "last [day]"
+
     const lastDayRegex = /^last\s+(sunday|monday|tuesday|wednesday|thursday|friday|saturday)$/;
     const lastMatch = trimmed.match(lastDayRegex);
 
@@ -295,7 +295,7 @@ export function parseNaturalDate(naturalString: string, baseDate: Date = new Dat
       return result;
     }
 
-    // Handle "this [day]"
+
     const thisDayRegex = /^this\s+(sunday|monday|tuesday|wednesday|thursday|friday|saturday)$/;
     const thisMatch = trimmed.match(thisDayRegex);
 
@@ -313,7 +313,7 @@ export function parseNaturalDate(naturalString: string, baseDate: Date = new Dat
       return result;
     }
 
-    // Handle "next week/month/year"
+
     if (trimmed === 'next week') {
       const result = new Date(baseDate);
       result.setDate(result.getDate() + 7);
@@ -330,7 +330,7 @@ export function parseNaturalDate(naturalString: string, baseDate: Date = new Dat
       return result;
     }
 
-    // Handle "last week/month/year"
+
     if (trimmed === 'last week') {
       const result = new Date(baseDate);
       result.setDate(result.getDate() - 7);
@@ -361,7 +361,7 @@ export function parseNaturalDate(naturalString: string, baseDate: Date = new Dat
  * @returns {Date | null} The parsed Date object, or null if unable to parse.
  */
 export function parseAny(input: string, baseDate: Date = new Date()): Date | null {
-  // Try each parsing strategy in order
+
   const strategies = [
     () => parseDateTime(input),
     () => parseDate(input),
@@ -417,7 +417,7 @@ export function extractTimeComponents(
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
 
-  // Determine if original was 12-hour format
+
   if (timeString.toUpperCase().includes('AM') || timeString.toUpperCase().includes('PM')) {
     const period = hours >= 12 ? 'PM' : 'AM';
     return { hours, minutes, seconds, period };
@@ -441,7 +441,7 @@ export function extractDateComponents(
 
   return {
     year: date.getFullYear(),
-    month: date.getMonth() + 1, // Return 1-12 instead of 0-11
+    month: date.getMonth() + 1,
     day: date.getDate(),
   };
 }

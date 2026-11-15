@@ -7,8 +7,8 @@ const eslintConfig = defineConfig([
   ...nextTs,
   {
     // This UI prototype includes generated shadcn-style hooks and components
-    // that intentionally use these established patterns. Keep the core Next.js
-    // rules enabled while avoiding React Compiler-only restrictions.
+
+
     rules: {
       'react-hooks/purity': 'off',
       'react-hooks/refs': 'off',

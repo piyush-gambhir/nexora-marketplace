@@ -135,7 +135,7 @@
   }
 }
 
-/* Performance optimizations */
+
 @layer utilities {
   .transform-gpu {
     transform: translateZ(0);

@@ -122,7 +122,7 @@ export const schema = z.object({
   reviewer: z.string(),
 });
 
-// Create a separate component for the drag handle
+
 function DragHandle({ id }: { id: number }) {
   const { attributes, listeners } = useSortable({
     id,
@@ -142,8 +142,8 @@ function DragHandle({ id }: { id: number }) {
   );
 }
 
-// TanStack Table v9 only bundles the features registered here. The sort and
-// filter fns are the ones the 'auto' default resolves to for string columns.
+
+
 const features = tableFeatures({
   rowSelectionFeature,
   columnVisibilityFeature,
