@@ -1,5 +1,5 @@
 
-FROM node:26.13.0-alpine AS base
+FROM node:26.13.1-alpine AS base
 WORKDIR /app
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \
@@ -17,7 +17,7 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 RUN pnpm run build
 
-FROM node:26.13.0-alpine AS runner
+FROM node:26.13.1-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \
